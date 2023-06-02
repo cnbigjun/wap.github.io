@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Qijun Zheng Web Page</title>
+    <!--    <link rel="stylesheet" href="styles.css">-->
+    <style>
+        form {
+            border: 2px solid mediumseagreen;
+        }
+
+        #body-container {
+            display: flex;
+        }
+
+        .left {
+            width: 50%;
+
+        }
+
+        .cell {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+        }
+
+        .left label {
+            float: left;
+        }
+
+        input[type=text], input[type=email],select, textarea {
+            float: right;
+            width: 30%;
+        }
+
+        .right {
+            flex: 1;
+            padding-left: 10px;
+        }
+        .upright{
+            width: 31%;
+        }
+        #head-container {
+            display: flex;
+            align-items: center;
+            background-color: mediumseagreen;
+            padding: 5px;
+        }
+
+        #head-container .actions {
+            margin-left: 4vw;
+        }
+
+        .dropdown-btn {
+            background-color: aquamarine;
+            border: none;
+            font-size: 32px;
+        }
+
+        #address {
+            height: 70px;
+            resize: vertical;
+        }
+
+        #foot-container {
+            display: flex;
+            justify-content: center;
+            background-color: gray;
+            padding: 10px;
+        }
+
+        #foot-container button {
+            margin-left: 40px;
+            color: azure;
+            background-color: mediumseagreen;
+        }
+
+        .required:after {
+            content: "*";
+            color: red;
+        }
+    </style>
+</head>
+<body>
+<form action="https://www.google.com" method="get">
+    <div id="head-container">
+        <h1>Workshop Registration</h1>
+        <h3 class="actions">More Actions</h3>
+        <button class="dropdown-btn">&#9662;</button>
+    </div>
+
+    <div id="body-container">
+        <div class="left">
+            <a href="">Register now while seats are available!</a>
+            <br>
+            <div class="cell"><label for="first-name">First Name<span class="required"></span></label>
+                <input type="text" id="first-name" name="first-name"></div>
+            <br>
+            <div class="cell"><label for="last-name">Last Name<span class="required"></span></label>
+                <input type="text" id="last-name" name="last-name"></div>
+            <br>
+            <div class="cell"><label for="company">Company/Institution<span class="required"></span></label>
+                <input type="text" id="company" name="company"></div>
+            <br>
+            <div class="cell"><label for="address">Address<span class="required"></span></label>
+                <textarea id="address" name="address" class="address-input"></textarea>
+            </div>
+            <br>
+            <div class="cell"><label for="city">City</label>
+                <input type="text" id="city" name="city"></div>
+            <br>
+            <div class="cell"><label for="state">State/Province/Region:</label>
+                <select id="state" name="state">
+                    <option disabled selected value="">- Select -</option>
+                    <option value="iowa">IOWA</option>
+                    <option value="new-york">New York</option>
+                </select></div>
+            <br>
+            <div class="cell"><label for="country">Country:</label>
+                <select id="country" name="country">
+                    <option disabled selected value="">- Select -</option>
+                    <option value="usa">USA</option>
+                    <option value="canada">Canada</option>
+                    <option value="uk">UK</option>
+                </select></div>
+            <br>
+            <div class="cell"><label for="email">Email<span class="required"></span></label>
+                <input type="email" id="email" name="email"></div>
+            <br>
+            <div class="cell"><label for="phone">Phone Number<span class="required"></span></label>
+                <input type="text" id="phone" name="phone"></div>
+            <br>
+        </div>
+
+        <div class="right">
+            <a href="">Lunch</a>
+            <br>
+            <div class="cell">
+                <label for="meal">Meal Preference:</label>
+                <select id="meal" name="meal">
+                    <option value="vegetarian">vegetarian</option>
+                    <option value="meat">meat</option>
+                </select></div>
+            <br>
+            <a href="">Payment Details</a><br>
+            <div class="cell">
+                <label>Payment Mode</label>
+                <div class="upright">
+                    <label for="cash"></label>
+                    <input type="checkbox" id="cash" name="cash">cash
+                    <br>
+                    <label for="cheque"></label>
+                    <input type="checkbox" id="cheque" name="cheque">Cheque
+                    <br>
+                    <label for="demand-draft"></label>
+                    <input type="checkbox" id="demand-draft" name="demand-draft">Demand Draft
+                </div>
+            </div>
+            <br>
+            <div class="cell">
+                <label for="dd">DD/Cheque NO.</label>
+                <input type="text" id="dd" name="dd">
+            </div>
+            <br>
+            <div class="cell">
+                <label for="drawn-on">Drawn On(Bank Name)</label>
+                <input type="text" id="drawn-on" name="drawn-on">
+            </div>
+            <br>
+            <div class="cell">
+                <label for="payable">Payable at:</label>
+                <input type="text" id="payable" name="payable">
+            </div>
+            <br>
+        </div>
+    </div>
+
+
+    <div id="foot-container">
+        <button type="submit">Submit</button>
+        <button type="reset">Reset</button>
+    </div>
+</form>
+
+</body>
+</html>
