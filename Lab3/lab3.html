@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Shopping</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div id="head-container">
+    <img src="logo.png" alt="logo photo">
+    <h1>Welcome Temu Shop of Qijun</h1>
+    <button>Logout</button>
+</div>
+<hr>
+<div id="body-container">
+    <table>
+        <caption>Product List</caption>
+        <tr>
+            <td>Name</td>
+            <td>Price</td>
+            <td>Stock</td>
+            <td>Actions</td>
+        </tr>
+        <tr>
+            <td>Node.js</td>
+            <td>9.99</td>
+            <td>8</td>
+            <td class="icon-button">
+                <img src="cart.png" alt="Shopping Cart">
+            </td>
+        </tr>
+        <tr>
+            <td>React</td>
+            <td>19.99</td>
+            <td>5</td>
+            <td class="icon-button">
+                <img src="cart.png" alt="Shopping Cart">
+            </td>
+        </tr>
+        <tr>
+            <td>Angular</td>
+            <td>29.99</td>
+            <td>13</td>
+            <td class="icon-button">
+                <img src="cart.png" alt="Shopping Cart">
+            </td>
+        </tr>
+    </table>
+    <table>
+        <caption>Your shopping cart</caption>
+        <tr>
+            <td>Name</td>
+            <td>Price</td>
+            <td>Total</td>
+            <td>Quality</td>
+        </tr>
+        <tr>
+            <td>Node.js</td>
+            <td>9.99</td>
+            <td>9.99</td>
+            <td>
+                <button>-</button>
+                <input type="number" value="0">
+                <button>+</button>
+            </td>
+        </tr>
+        <tr>
+            <td>Angular</td>
+            <td>29.99</td>
+            <td>299.90</td>
+            <td>
+                <button>-</button>
+                <input type="number" value="10">
+                <button>+</button>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="4" class="merged-cell">Total: 300.98</td>
+        </tr>
+    </table>
+    <button>Place order</button>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,82 @@
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+table td {
+    border: 1px solid black;
+    padding: 8px;
+    text-align: center;
+}
+
+#head-container {
+    display: flex;
+    align-content: center;
+    justify-content: space-between;
+}
+
+#head-container img {
+    order: 1;
+    max-width: 20%;
+    height: auto;
+}
+
+#head-container h1 {
+    order: 2;
+    text-align: center;
+    margin: 5%;
+}
+
+#head-container button {
+    order: 3;
+    width: 10vw;
+    height: 5vh;
+    margin: 5%;
+}
+
+#head-container img {
+    width: 15vw;
+}
+
+div > h1 {
+    color: navy;
+}
+
+#body-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    position: relative;
+}
+
+#body-container table {
+    width: 92%;
+    margin: 4% auto;
+}
+
+table caption {
+    text-align: left;
+    font-weight: bold;
+    padding: 3%;
+}
+
+#body-container > button {
+    position: absolute;
+    bottom: 0;
+    right: 5%;
+}
+
+.merged-cell {
+    text-align: right;
+}
+
+.icon-button img {
+    width: 24px;
+    height: 24px;
+}
+
+td input {
+    flex: 1;
+    width: 3vw;
+    text-align: center;
+}

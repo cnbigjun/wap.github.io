@@ -1,0 +1,25 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: lightblue;
+}
+
+h1 {
+    color: navy;
+    font-weight: bold;
+    font-size: xxx-large;
+}
+
+li a {
+    color: red;
+}
+
+.image-block1 {
+    display: inline-block;
+}
+
+div > img {
+    height: 200px;
+}
+a > img {
+    height: 100px;
+}
