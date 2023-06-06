@@ -18,7 +18,7 @@ let user = {
 };
 //askPassword(user.loginOk, user.loginFail);// origin
 //askPassword(user.loginOk.bind(user), user.loginFail.bind(user));  //bind fix
-//askPassword(()=>user.loginOk(), ()=>user.loginFail());// wrapper ifx
+askPassword(()=>user.loginOk(), ()=>user.loginFail());// wrapper ifx
 const okCall = function (){
     user.loginOk.call(user);
 }
@@ -33,7 +33,7 @@ const failApply = function (){
 }
 
 //askPassword(okCall, failCall);// call ifx
-askPassword(okApply, failApply);// apply ifx
+//askPassword(okApply, failApply);// apply ifx
 
 let group = {
     title: "Our Group",
