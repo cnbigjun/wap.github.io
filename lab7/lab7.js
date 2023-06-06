@@ -33,7 +33,7 @@ const failApply = function (){
 }
 
 //askPassword(okCall, failCall);// call ifx
-askPassword(okApply(), failApply());// apply ifx
+askPassword(okApply, failApply);// apply ifx
 
 let group = {
     title: "Our Group",
