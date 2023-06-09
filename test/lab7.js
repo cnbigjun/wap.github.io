@@ -22,15 +22,3 @@ let user = {
 //askPassword(()=>user.loginOk.call(user), ()=>user.loginFail.call(user));// call
 askPassword(()=>user.loginOk.apply(user), ()=>user.loginFail.apply(user));// apply
 
-
-
-let group = {
-    title: "Our Group",
-    students: ["John", "Pete", "Alice"],
-    showList: function () {
-        this.students.forEach(function (student) {
-                console.log(this.title + ": " + student);
-            }.bind(this));//fix here
-    }
-};
-group.showList();
