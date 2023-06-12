@@ -1,12 +1,16 @@
-function printNumbers(from, to) {
-    let current = from;
-    setTimeout(function go(){
-        console.log(current);
-        if (current<to){
-            setTimeout(go,1000);
-        }
-        current++;
-    },1000);
+function foo(x) {
+    let m;
+    console.log(x, y);
+    if(x > 5){
+        var y = 5;
+        m = x + y;
+    } else {
+        let z = 10;
+        m = z;
+    }
+    x = m;
+    console.log(x, y);
 }
-
-printNumbers(100,2000);
+var x = 10;
+foo(3);
+console.log(x);
