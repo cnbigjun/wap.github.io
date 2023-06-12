@@ -49,7 +49,7 @@ LinkedList.prototype.print = function() {
         values.push(currentNode.value);
         currentNode = currentNode.next;
     }
-    console.log(values.join(' -> '));
+    console.log('{'+values.join(',')+'}');
 }
 
 
