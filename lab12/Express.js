@@ -2,8 +2,8 @@ const express=require('express');
 const path = require("path");
 const app=express();
 
-const user = express.Router();
-const product = express.Router();
+const productRouter = require('./routes/productRouter');
+const userRouter = require('./routes/userRouter');
 
 function middleware(req,res,next){
     console.log('this is global middleware');
@@ -12,28 +12,19 @@ function middleware(req,res,next){
 app.use(middleware);
 app.use(express.static('public'));
 
-app.get('/',(req,res)=>{
-    res.send('hello express');
-})
-user.get('/users',(req,res)=>{
-    res.send('hello users!!!!');
-})
-product.get('/products',(req,res)=>{
-    res.sendFile(path.join(__dirname,'views','product.html'));
-})
-
-user.post('/users',(req,res)=>{
-    res.send('hello users!!!!------post');
-})
-product.post('/products',()=>console.log('this is a middleware of part'),(req,res)=>{
-    res.send('hello products! ----post');
-})
 
 
 
 
-app.use('/',user);
-app.use('/',product);
+
+
+app.use('/user',userRouter);
+app.use('/product',productRouter);
+
+
+
+
+
 app.use((req, res, next) => {
     res.status(404).sendFile(path.join(__dirname, 'views', '404.html'));
 })
