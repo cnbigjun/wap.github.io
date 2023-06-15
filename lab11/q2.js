@@ -8,7 +8,10 @@ http.createServer((req, res) => {
         res.writeHead(200, {'Content-Type': 'text/html'});
         res.write('<html>');
         res.write('<head><title> Image </title></head>');
-        res.write('<body><img src="./res.jpg" alt=""></body>');
+        res.write('<body><div><img src="./res.jpg" alt="" style="  width: auto;\n' +
+            '  height: auto;\n' +
+            '  max-width: 100%;\n' +
+            '  max-height: 100%;"></div></body>');
         res.write('</html>');
         res.end();
     } else if (url === '/res.jpg') {
